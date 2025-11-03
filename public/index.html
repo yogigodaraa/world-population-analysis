@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Population Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>World Population Analysis</h1>
+        <form id="analysisForm">
+            <div class="form-group">
+                <label for="csvfile">CSV File:</label>
+                <input type="file" id="csvfile" name="csvfile" accept=".csv" required>
+            </div>
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" required>
+            </div>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <div class="result-section">
+                <h3>Maximum and Minimum Population Countries</h3>
+                <p>Maximum: <span id="maxCountry"></span></p>
+                <p>Minimum: <span id="minCountry"></span></p>
+            </div>
+            <div class="result-section">
+                <h3>Population Statistics</h3>
+                <p>Average: <span id="average"></span></p>
+                <p>Standard Deviation: <span id="stdDev"></span></p>
+            </div>
+            <div class="result-section">
+                <h3>Population Density</h3>
+                <ul id="density"></ul>
+            </div>
+            <div class="result-section">
+                <h3>Correlation Coefficient</h3>
+                <p>Population-Area Correlation: <span id="correlation"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
